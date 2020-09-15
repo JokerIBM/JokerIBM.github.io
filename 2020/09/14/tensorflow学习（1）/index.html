@@ -17,10 +17,20 @@
   <meta name="description" content="">
   <meta name="author" content="jokerIBM">
   <meta name="keywords" content="">
-  <title>分类 - Hexo</title>
+  <title>基于mo平台使用tensorflow数据训练 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/zenburn.min.css" />
+  
+
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -43,7 +53,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -137,7 +147,7 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/%E5%A4%AA%E7%A9%BA%E5%88%86%E7%B1%BB.jpg') no-repeat center center;
+         style="background: url('/img/%E5%A4%AA%E7%A9%BA%E5%BD%92%E6%A1%A3.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -145,6 +155,40 @@
             <span class="h2" id="subtitle">
               
             </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-09-14 08:53" pubdate>
+      2020年9月14日 早上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      166 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      2
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -157,112 +201,95 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-
-
-
-
-
-<div class="category-list">
-  
-  
-  
-  
-    
-    
-    <div class="category row">
-      <a
-        class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-ckf40fhlw000344pmcd1h028h" role="tab" data-toggle="collapse" href="#collapse-ckf40fhlw000344pmcd1h028h"
-        aria-expanded="false"
-      >
-        Hexo
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      <a href="/categories/Hexo/" class="category-count col-2 col-md-1">
-        <i class="iconfont icon-articles"></i>
-        <span>2</span>
-      </a>
-      <div class="category-collapse">
-        
-          
-  <div id="collapse-ckf40fhlw000344pmcd1h028h" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-ckf40fhlw000344pmcd1h028h">
-    
-    
-    
       
-      
-        <a href="/2020/09/07/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%9F%E6%88%90%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8/" class="list-group-item list-group-item-action">
-          <span class="category-post">Hexo基本安装</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2020/09/05/hello-world/" class="list-group-item list-group-item-action">
-          <span class="category-post">Hello World，hexo生成的第一篇文章</span>
-        </a>
-      
-    
-  </div>
 
-        
-      </div>
-    </div>
-  
-    
-    
-    <div class="category row">
-      <a
-        class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-ckf40fhm0000644pmbez908kk" role="tab" data-toggle="collapse" href="#collapse-ckf40fhm0000644pmbez908kk"
-        aria-expanded="false"
-      >
-        Tensorflow
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      <a href="/categories/Tensorflow/" class="category-count col-2 col-md-1">
-        <i class="iconfont icon-articles"></i>
-        <span>1</span>
-      </a>
-      <div class="category-collapse">
-        
-          
-  <div id="collapse-ckf40fhm0000644pmbez908kk" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-ckf40fhm0000644pmbez908kk">
-    
-    
-    
-      
-      
-        <a href="/2020/09/14/tensorflow%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="list-group-item list-group-item-action">
-          <span class="category-post">基于mo平台使用tensorflow数据训练</span>
-        </a>
-      
-    
-  </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">基于mo平台使用tensorflow数据训练</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>根据例子和视频分析</p>
+<p>More info: <a target="_blank" rel="noopener" href="https://mofanpy.com/tutorials/machine-learning/tensorflow/example2/">教程请点击</a><br>结构图如下<br><img src="/2020/09/14/tensorflow%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/%E7%BB%93%E6%9E%84%E5%9B%BE.jpg" srcset="/img/loading.gif" alt="结构图"></p>
+<p>1.会需要用到两个模块nump和tensorflow：</p>
+<div class="hljs"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> nump <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf</code></pre></div>
 
-        
-      </div>
-    </div>
-  
-</div>
+<p>2.创建数据：</p>
+<div class="hljs"><pre><code class="hljs apache"><span class="hljs-attribute">x_data</span> = np.random.rand(<span class="hljs-number">100</span>).astype(np.float<span class="hljs-number">32</span>)#随机创建<span class="hljs-number">100</span>个数列[np.random.rand], 转换数据类型[astype]
+<span class="hljs-attribute">y_data</span> = x_data*<span class="hljs-number">0</span>.<span class="hljs-number">1</span> + <span class="hljs-number">0</span>.<span class="hljs-number">3</span> #create = (w*x+y)公式，w是神经网络参数，x&amp;y是数据点</code></pre></div>
+<p>其中使用nump的np.random.rand()是随机生成一百个数列</p>
+<p>3.提升精准度和预测误差：<br>未完待续<br>4.使用优化器优化误差和进行学习效率<br>未完待续<br>5.初始化结构和激活神经网络：</p>
 
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Tensorflow/">Tensorflow</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Tensorflow/">Tensorflow</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/09/07/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%9F%E6%88%90%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8/">
+                        <span class="hidden-mobile">Hexo基本安装</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
   </main>
 
@@ -327,6 +354,8 @@
 
   
     
+      <script  src="/js/lazyload.js" ></script>
+    
   
 
 
@@ -340,6 +369,31 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
 
 
   <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
@@ -347,7 +401,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "分类&nbsp;",
+        "基于mo平台使用tensorflow数据训练&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -362,6 +416,21 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
 
 
   <script  src="/js/local-search.js" ></script>
@@ -375,6 +444,20 @@
   </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
 
 
 
