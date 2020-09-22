@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      166 字
+      353 字
     </span>
   
 
@@ -181,7 +181,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      4
        分钟
     </span>
   
@@ -224,7 +224,26 @@
 <div class="hljs"><pre><code class="hljs apache"><span class="hljs-attribute">x_data</span> = np.random.rand(<span class="hljs-number">100</span>).astype(np.float<span class="hljs-number">32</span>)#随机创建<span class="hljs-number">100</span>个数列[np.random.rand], 转换数据类型[astype]
 <span class="hljs-attribute">y_data</span> = x_data*<span class="hljs-number">0</span>.<span class="hljs-number">1</span> + <span class="hljs-number">0</span>.<span class="hljs-number">3</span> #create = (w*x+y)公式，w是神经网络参数，x&amp;y是数据点</code></pre></div>
 <p>其中使用nump的np.random.rand()是随机生成一百个数列</p>
-<p>3.提升精准度和预测误差：<br>未完待续<br>4.使用优化器优化误差和进行学习效率<br>未完待续<br>5.初始化结构和激活神经网络：</p>
+<p>3.提升精准度和预测误差：</p>
+<div class="hljs"><pre><code class="hljs ini"><span class="hljs-attr">y</span> = Weights*x_data + biases<span class="hljs-comment"># 提升准确度</span>
+<span class="hljs-attr">loss</span> = tf.reduce_mean(tf.square(y-y_data))<span class="hljs-comment">#预测误差</span></code></pre></div>
+<p>其中Weights*x_data + biases可以理解为，一维张量</p>
+<p>4.使用优化器优化误差和进行学习效率</p>
+<div class="hljs"><pre><code class="hljs ini"><span class="hljs-attr">optimizer</span> = tf.train.GradientDescentOptimizer(<span class="hljs-number">0.5</span>)<span class="hljs-comment">#优化器学习效率</span>
+<span class="hljs-attr">train</span> = optimizer.minimize(loss)<span class="hljs-comment">#把预算的误差优化</span></code></pre></div>
+
+<p>5.初始化结构和激活神经网络：<br>激活网络时候一定要用Session.run，如果函数有Variable也一定要激活</p>
+<div class="hljs"><pre><code class="hljs makefile">sess = tf.Session()<span class="hljs-comment">#初始化</span>
+init = tf.global_variables_initalizer()<span class="hljs-comment">#初始化</span>
+sess.run(init)<span class="hljs-comment">#激活</span>
+</code></pre></div>
+
+<p>6.激活后有效执行200次：</p>
+<div class="hljs"><pre><code class="hljs routeros"><span class="hljs-keyword">for</span> <span class="hljs-keyword">step</span> <span class="hljs-keyword">in</span> range(200):
+    sess.<span class="hljs-builtin-name">run</span>(train)
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">step</span> % 20 == 0:
+        <span class="hljs-builtin-name">print</span>(<span class="hljs-keyword">step</span>, sess.<span class="hljs-builtin-name">run</span>(Weights), sess.<span class="hljs-builtin-name">run</span>(biases))</code></pre></div>
+<p>=====================================================================================================<br>分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线分割线<br>=====================================================================================================<br>这是关于sess.run和Variable的用法，未完待续~</p>
 
             </div>
             <hr>
