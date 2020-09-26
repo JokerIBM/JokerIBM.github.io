@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      473 字
+      609 字
     </span>
   
 
@@ -181,7 +181,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      8
        分钟
     </span>
   
@@ -270,8 +270,16 @@ product = tf.matmul(x_data,y_data)<span class="hljs-comment">#加起来</span>
 <p>但是有个重点，Variable是需要Sess.run流动起来的</p>
 <div class="hljs"><pre><code class="hljs ini"><span class="hljs-attr">init</span> = tf.global_variables_initalizer()
 <span class="hljs-attr">sess</span> = sess.run(init)</code></pre></div>
+<p>=============<br>分割线<br>=============<br>关于placeholder函数的使用，先看他的参数：</p>
+<div class="hljs"><pre><code class="hljs fortran">tf<span class="hljs-number">.</span>placeholder(dtype,<span class="hljs-built_in">shape</span>=<span class="hljs-keyword">None</span>,<span class="hljs-keyword">name</span>=<span class="hljs-keyword">None</span>)</code></pre></div>
+<p>dtype：数据类型，shape：数据形状，name：名称，其中dtype是一定要选择的参数<br>placeholder在程序中只会占位，避免和代码上下文产生冲突，使用feed_dict配合让placehold喂数据</p>
+<div class="hljs"><pre><code class="hljs vim">input1 = <span class="hljs-keyword">tf</span>.placeholder(<span class="hljs-keyword">tf</span>.float32)#flow大部分支持<span class="hljs-number">32</span>类型
+input2 = <span class="hljs-keyword">tf</span>.placeholder(<span class="hljs-keyword">tf</span>.float32)
 
+output = <span class="hljs-keyword">tf</span>.multiply(input1,input2)#multiply是乘法函数
 
+with <span class="hljs-keyword">tf</span>.Session() <span class="hljs-keyword">as</span> ses<span class="hljs-variable">s:</span>
+	<span class="hljs-keyword">print</span>(sess.run(output,fleed_dict=(input1:[<span class="hljs-number">3</span>.],input2:[<span class="hljs-number">2</span>.]))#使用fleed_dict喂入数据，和<span class="hljs-keyword">python</span>字典一样用法</code></pre></div>
             </div>
             <hr>
             <div>
