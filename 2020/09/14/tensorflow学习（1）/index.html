@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      392 字
+      473 字
     </span>
   
 
@@ -181,7 +181,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      6
        分钟
     </span>
   
@@ -265,6 +265,12 @@ product = tf.matmul(x_data,y_data)<span class="hljs-comment">#加起来</span>
 <span class="hljs-string">with tf.Session as sess:</span>
 <span class="hljs-string">	result = sess.run(product)</span>
 <span class="hljs-string">	print(result)&quot;&quot;&quot;</span><span class="hljs-string">&quot;</span></code></pre></div>
+<p>Variable是一个变量控制，主要是tensorflow的初始值何变量值分开的<br>可以随意设置它的变量值</p>
+<div class="hljs"><pre><code class="hljs reasonml">tf.<span class="hljs-constructor">Variable(<span class="hljs-params">initializer</span>,<span class="hljs-params">name</span>)</span>,参数<span class="hljs-keyword">initializer</span>是初始化参数，name是可自定义的变量名称</code></pre></div>
+<p>但是有个重点，Variable是需要Sess.run流动起来的</p>
+<div class="hljs"><pre><code class="hljs ini"><span class="hljs-attr">init</span> = tf.global_variables_initalizer()
+<span class="hljs-attr">sess</span> = sess.run(init)</code></pre></div>
+
 
             </div>
             <hr>
