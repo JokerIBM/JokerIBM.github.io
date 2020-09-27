@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      611 字
+      681 字
     </span>
   
 
@@ -181,7 +181,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      9
        分钟
     </span>
   
@@ -217,13 +217,19 @@
               <p>根据例子和视频分析</p>
 <p>More info: <a target="_blank" rel="noopener" href="https://mofanpy.com/tutorials/machine-learning/tensorflow/example2/">教程请点击</a><br>结构图如下<br><img src="/2020/09/14/tensorflow%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/%E7%BB%93%E6%9E%84%E5%9B%BE.jpg" srcset="/img/loading.gif" alt="结构图"></p>
 <p>1.会需要用到两个模块nump和tensorflow：</p>
-<div class="hljs"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> nump <span class="hljs-keyword">as</span> np
+<div class="hljs"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
 <span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf</code></pre></div>
 
 <p>2.创建数据：</p>
 <div class="hljs"><pre><code class="hljs apache"><span class="hljs-attribute">x_data</span> = np.random.rand(<span class="hljs-number">100</span>).astype(np.float<span class="hljs-number">32</span>)#随机创建<span class="hljs-number">100</span>个数列[np.random.rand], 转换数据类型[astype]
 <span class="hljs-attribute">y_data</span> = x_data*<span class="hljs-number">0</span>.<span class="hljs-number">1</span> + <span class="hljs-number">0</span>.<span class="hljs-number">3</span> #create = (w*x+y)公式，w是神经网络参数，x&amp;y是数据点</code></pre></div>
 <p>其中使用nump的np.random.rand()是随机生成一百个数列</p>
+<p>2.5开始创建结构</p>
+<div class="hljs"><pre><code class="hljs apache"><span class="hljs-attribute">Weights</span> = tf.Variable(tf.random_uniform([<span class="hljs-number">1</span>], -<span class="hljs-number">1</span>.<span class="hljs-number">0</span>, <span class="hljs-number">1</span>.<span class="hljs-number">0</span>))# 初始化数据（variable），随机数列（tf.random_uniform）的范围是<span class="hljs-number">1</span>维，随机数列生成的范围-<span class="hljs-number">1</span>.<span class="hljs-number">0</span>，<span class="hljs-number">1</span>.<span class="hljs-number">0</span>
+<span class="hljs-attribute">biases</span> = tf.Variable(tf.zeros([<span class="hljs-number">1</span>]))#定义初始值为O让他一步一步学习</code></pre></div>
+
+
+
 <p>3.提升精准度和预测误差：</p>
 <div class="hljs"><pre><code class="hljs ini"><span class="hljs-attr">y</span> = Weights*x_data + biases<span class="hljs-comment"># 提升准确度</span>
 <span class="hljs-attr">loss</span> = tf.reduce_mean(tf.square(y-y_data))<span class="hljs-comment">#预测误差</span></code></pre></div>
@@ -308,6 +314,12 @@ with <span class="hljs-keyword">tf</span>.Session() <span class="hljs-keyword">a
                 <div class="post-prevnext row">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2020/09/27/%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">创建第一个神经网络</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
