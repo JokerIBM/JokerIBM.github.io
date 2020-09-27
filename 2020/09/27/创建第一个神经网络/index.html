@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      137 字
+      145 字
     </span>
   
 
@@ -214,9 +214,9 @@
             <h1 style="display: none">创建第一个神经网络</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>More info: <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/65472471">神经网络链接资料</a><br>1.神经网络有输入层，隐藏层，输出层<br>要先创造层</p>
+              <p>More info: <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/65472471">神经网络链接资料</a><br>1.神经网络有输入层，隐藏层，输出层<br>构造一个神经层函数</p>
 <div class="hljs"><pre><code class="hljs reasonml">import tensorflow <span class="hljs-keyword">as</span> tf
-###定义层
+###构造神经层函数
 def add<span class="hljs-constructor">_layer(<span class="hljs-params">inputs</span>,<span class="hljs-params">in_size</span>,<span class="hljs-params">out_siez</span>,<span class="hljs-params">activation_function</span>=None)</span>:
 		Weights = tf.<span class="hljs-constructor">Variable(<span class="hljs-params">tf</span>.<span class="hljs-params">rondom_normal</span>([<span class="hljs-params">inputs</span>,<span class="hljs-params">out_siez</span>])</span>#创建输入和输出层为随机矩阵
 		biase = tf.<span class="hljs-constructor">Variable(<span class="hljs-params">tf</span>.<span class="hljs-params">zeros</span>([1,<span class="hljs-params">out_siez</span>]+0.1)</span>#创建值列表为<span class="hljs-number">1</span>,初始值不能为<span class="hljs-number">0</span>
