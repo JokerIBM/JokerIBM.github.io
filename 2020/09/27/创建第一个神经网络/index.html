@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      122 字
+      128 字
     </span>
   
 
@@ -220,7 +220,7 @@
 def add<span class="hljs-constructor">_layer(<span class="hljs-params">inputs</span>,<span class="hljs-params">in_size</span>,<span class="hljs-params">out_siez</span>,<span class="hljs-params">activation_function</span>=None)</span>:
 		Weights = tf.<span class="hljs-constructor">Variable(<span class="hljs-params">tf</span>.<span class="hljs-params">rondom_normal</span>([<span class="hljs-params">inputs</span>,<span class="hljs-params">out_siez</span>])</span>#创建输入和输出层为随机矩阵
 		biase = tf.<span class="hljs-constructor">Variable(<span class="hljs-params">tf</span>.<span class="hljs-params">zeros</span>([1,<span class="hljs-params">out_siez</span>]+0.1)</span>#创建值列表为<span class="hljs-number">1</span>,初始值不能为<span class="hljs-number">0</span>
-		wx_plus_b = tf.matmul(inputs,Weights) + biase #矩阵运算公式X*W1+B1
+		wx_plus_b = tf.matmul(inputs,Weights) + biase #矩阵运算公式X*W1+B1，没有激活的值
 		#####是否使用激励函数
 		<span class="hljs-keyword">if</span> activation_function is None:
 			output = wx_plus_b
